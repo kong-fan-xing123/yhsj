@@ -57,8 +57,13 @@
     yh(location.search.substring(1));
     for(var i=1,l=arr.length;i<l;i++){
        var p=document.createElement("p");
+        
         for(var j=1,len=i+1;j<len;j++){
             var span=document.createElement("span");
+            span.onclick=function(e){
+                e.target.contenteditable=true
+            }
+            
             span.innerHTML=arr[i][j];
             p.appendChild(span);
             
